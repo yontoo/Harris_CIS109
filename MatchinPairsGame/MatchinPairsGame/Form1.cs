@@ -29,8 +29,25 @@ namespace MatchinPairsGame
         public FormMPG()
         {
             InitializeComponent();
+            AssignIconsToSquare();
         }
 
+        private void AssignIconsToSquare()
+        {
+            foreach (Control control in tableLayoutPanel1.Controls)
+            {
+                Label iconLabel = control as Label;
+                if (iconLabel != null)
+                {
+                    int randomNumber = random.Next(icons.Count);
+                    iconLabel.Text = icons[randomNumber];
+
+                    icons.RemoveAt(randomNumber);
+                }
+            }
+        }
+
+       
         private void Form1_Load(object sender, EventArgs e)
         {
 
