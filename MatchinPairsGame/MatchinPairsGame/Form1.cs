@@ -79,6 +79,11 @@ namespace MatchinPairsGame
 
         private void label_Click(object sender, EventArgs e)
         {
+            if (firstClicked != null && secondClicked != null)
+            {
+                return;
+            }
+
             Label clickedLabel = sender as Label;
 
             if (clickedLabel == null)
@@ -100,6 +105,20 @@ namespace MatchinPairsGame
 
             secondClicked = clickedLabel;
             secondClicked.ForeColor = Color.Black;
+
+            timer1.Start();
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            timer1.Stop();
+
+            firstClicked.ForeColor = firstClicked.BackColor;
+            secondClicked.ForeColor = secondClicked.BackColor;
+
+            firstClicked = null;
+            secondClicked = null;
+
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
