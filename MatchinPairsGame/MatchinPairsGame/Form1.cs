@@ -26,6 +26,9 @@ namespace MatchinPairsGame
             "!", "!", "N", "N", "b", "b", "w", "w",
              "z", "z", "k", "k", "v", "v", ",", ","
         };
+
+        Label firstClicked, secondClicked;
+
         public FormMPG()
         {
             InitializeComponent();
@@ -34,16 +37,37 @@ namespace MatchinPairsGame
 
         private void AssignIconsToSquare()
         {
-            foreach (Control control in tableLayoutPanel1.Controls)
+            //foreach (Control control in tableLayoutPanel1.Controls)
+            //{
+            //    Label iconLabel = control as Label;
+            //    if (iconLabel != null)
+            //    {
+            //        int randomNumber = random.Next(icons.Count);
+            //        iconLabel.Text = icons[randomNumber];
+            //        iconLabel.ForeColor = iconLabel.BackColor;
+            //        icons.RemoveAt(randomNumber);
+            //    }
+            //}
+
+            Label label;
+            int randomNumber;
+
+            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
             {
-                Label iconLabel = control as Label;
-                if (iconLabel != null)
+                if (tableLayoutPanel1.Controls[i] is Label)
                 {
-                    int randomNumber = random.Next(icons.Count);
-                    iconLabel.Text = icons[randomNumber];
-                    iconLabel.ForeColor = iconLabel.BackColor;
-                    icons.RemoveAt(randomNumber);
+                    label = (Label)tableLayoutPanel1.Controls[i];
                 }
+                else
+                {
+                    continue;
+                }
+
+                randomNumber = random.Next(icons.Count);
+                label.Text = icons[randomNumber];
+                label.ForeColor = label.BackColor;
+                icons.RemoveAt(randomNumber);
+
             }
         }
 
@@ -51,6 +75,31 @@ namespace MatchinPairsGame
         private void Form1_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void label_Click(object sender, EventArgs e)
+        {
+            Label clickedLabel = sender as Label;
+
+            if (clickedLabel == null)
+            {
+                return;
+            }
+
+            if (clickedLabel.ForeColor == Color.Black)
+            {
+                return;
+            }
+
+            if (firstClicked == null)
+            {
+                firstClicked = clickedLabel;
+                firstClicked.ForeColor = Color.Black;
+                return;
+            }
+
+            secondClicked = clickedLabel;
+            secondClicked.ForeColor = Color.Black;
         }
 
         private void tableLayoutPanel1_Paint(object sender, PaintEventArgs e)
