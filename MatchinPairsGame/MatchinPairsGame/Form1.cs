@@ -106,7 +106,34 @@ namespace MatchinPairsGame
             secondClicked = clickedLabel;
             secondClicked.ForeColor = Color.Black;
 
-            timer1.Start();
+            CheckForWinner();
+
+            if (firstClicked.Text == secondClicked.Text)
+            {
+                firstClicked = null;
+                secondClicked = null;
+            }
+            else
+            {
+                timer1.Start();
+            }
+        }
+
+        private void CheckForWinner()
+        {
+            Label label;
+            for (int i = 0; i < tableLayoutPanel1.Controls.Count; i++)
+            {
+                label = tableLayoutPanel1.Controls[i] as Label;
+
+                if (label != null && label.ForeColor == label.BackColor)
+                {
+                    return;
+                }
+            }
+
+                MessageBox.Show("You matched all the icons.");
+            Close();
         }
 
         private void timer1_Tick(object sender, EventArgs e)
