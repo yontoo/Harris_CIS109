@@ -1,6 +1,6 @@
 ﻿namespace MusicPlayer
 {
-    partial class Form1
+    partial class PlayerForm
     {
         /// <summary>
         /// Required designer variable.
@@ -28,15 +28,15 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(PlayerForm));
             this.Player = new AxWMPLib.AxWindowsMediaPlayer();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.FilePathBox = new System.Windows.Forms.TextBox();
             this.BrowseButton = new System.Windows.Forms.Button();
             this.PlayButton = new System.Windows.Forms.Button();
             this.PauseButton = new System.Windows.Forms.Button();
             this.StopButton = new System.Windows.Forms.Button();
             this.ExitButton = new System.Windows.Forms.Button();
-            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.openBrowseFile = new System.Windows.Forms.OpenFileDialog();
             ((System.ComponentModel.ISupportInitialize)(this.Player)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,14 +50,14 @@
             this.Player.Size = new System.Drawing.Size(588, 223);
             this.Player.TabIndex = 0;
             // 
-            // textBox1
+            // FilePathBox
             // 
-            this.textBox1.Location = new System.Drawing.Point(-4, 192);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(112, 30);
-            this.textBox1.TabIndex = 1;
+            this.FilePathBox.Location = new System.Drawing.Point(-4, 192);
+            this.FilePathBox.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.FilePathBox.Multiline = true;
+            this.FilePathBox.Name = "FilePathBox";
+            this.FilePathBox.Size = new System.Drawing.Size(112, 30);
+            this.FilePathBox.TabIndex = 1;
             // 
             // BrowseButton
             // 
@@ -134,11 +134,11 @@
             this.ExitButton.UseVisualStyleBackColor = false;
             this.ExitButton.Click += new System.EventHandler(this.ExitButton_Click);
             // 
-            // openFileDialog1
+            // openBrowseFile
             // 
-            this.openFileDialog1.FileName = "openFileDialog1";
+            this.openBrowseFile.FileName = "openFileDialog1";
             // 
-            // Form1
+            // PlayerForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -149,12 +149,12 @@
             this.Controls.Add(this.PauseButton);
             this.Controls.Add(this.PlayButton);
             this.Controls.Add(this.BrowseButton);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.FilePathBox);
             this.Controls.Add(this.Player);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
             this.MaximizeBox = false;
-            this.Name = "Form1";
+            this.Name = "PlayerForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "My Music Player";
             ((System.ComponentModel.ISupportInitialize)(this.Player)).EndInit();
@@ -166,13 +166,13 @@
         #endregion
 
         private AxWMPLib.AxWindowsMediaPlayer Player;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox FilePathBox;
         private System.Windows.Forms.Button BrowseButton;
         private System.Windows.Forms.Button PlayButton;
         private System.Windows.Forms.Button PauseButton;
         private System.Windows.Forms.Button StopButton;
         private System.Windows.Forms.Button ExitButton;
-        private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.OpenFileDialog openBrowseFile;
     }
 }
 
