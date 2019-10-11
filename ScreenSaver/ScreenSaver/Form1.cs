@@ -43,7 +43,7 @@ namespace ScreenSaver
                 BGImages.Add(new Bitmap(image));
             }
 
-            for (int i = 0; i < 50; i++)
+            for (int i = 0; i < 600; i++)
             {
                 BritPic mp = new BritPic();
                 mp.PicNum = i % BGImages.Count;
@@ -62,16 +62,18 @@ namespace ScreenSaver
 
         private void formScSvr_Paint(object sender, PaintEventArgs e)
         {
-            foreach(BritPic bp in BritPics)
+            foreach (BritPic bp in BritPics)
             {
                 e.Graphics.DrawImage(BGImages[bp.PicNum], bp.X, bp.Y);
                 bp.X -= 2;
 
-                if(bp.X < -250)
+
+                if (bp.X < -250)
                 {
                     bp.X = Width + rand.Next(20, 100);
                 }
             }
         }
+
     }
 }
