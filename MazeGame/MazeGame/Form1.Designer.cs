@@ -29,6 +29,14 @@
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
+            this.finishLabel = new System.Windows.Forms.Label();
+            this.label25 = new System.Windows.Forms.Label();
+            this.label24 = new System.Windows.Forms.Label();
+            this.label23 = new System.Windows.Forms.Label();
+            this.label22 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.label20 = new System.Windows.Forms.Label();
+            this.label19 = new System.Windows.Forms.Label();
             this.label18 = new System.Windows.Forms.Label();
             this.label17 = new System.Windows.Forms.Label();
             this.label16 = new System.Windows.Forms.Label();
@@ -47,19 +55,13 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.label19 = new System.Windows.Forms.Label();
-            this.label20 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
-            this.label22 = new System.Windows.Forms.Label();
-            this.label23 = new System.Windows.Forms.Label();
-            this.label24 = new System.Windows.Forms.Label();
-            this.label25 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.finishLabel);
             this.panel1.Controls.Add(this.label25);
             this.panel1.Controls.Add(this.label24);
             this.panel1.Controls.Add(this.label23);
@@ -89,6 +91,72 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(512, 488);
             this.panel1.TabIndex = 0;
+            // 
+            // finishLabel
+            // 
+            this.finishLabel.AutoSize = true;
+            this.finishLabel.Location = new System.Drawing.Point(461, 462);
+            this.finishLabel.Name = "finishLabel";
+            this.finishLabel.Size = new System.Drawing.Size(34, 13);
+            this.finishLabel.TabIndex = 25;
+            this.finishLabel.Text = "Finish";
+            this.finishLabel.MouseEnter += new System.EventHandler(this.finishLabel_MouseEnter);
+            // 
+            // label25
+            // 
+            this.label25.BackColor = System.Drawing.Color.Black;
+            this.label25.Location = new System.Drawing.Point(437, 77);
+            this.label25.Name = "label25";
+            this.label25.Size = new System.Drawing.Size(30, 101);
+            this.label25.TabIndex = 24;
+            // 
+            // label24
+            // 
+            this.label24.BackColor = System.Drawing.Color.Black;
+            this.label24.Location = new System.Drawing.Point(258, 420);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(23, 66);
+            this.label24.TabIndex = 23;
+            // 
+            // label23
+            // 
+            this.label23.BackColor = System.Drawing.Color.Black;
+            this.label23.Location = new System.Drawing.Point(179, 383);
+            this.label23.Name = "label23";
+            this.label23.Size = new System.Drawing.Size(23, 66);
+            this.label23.TabIndex = 22;
+            // 
+            // label22
+            // 
+            this.label22.BackColor = System.Drawing.Color.Black;
+            this.label22.Location = new System.Drawing.Point(125, 420);
+            this.label22.Name = "label22";
+            this.label22.Size = new System.Drawing.Size(23, 66);
+            this.label22.TabIndex = 21;
+            // 
+            // label21
+            // 
+            this.label21.BackColor = System.Drawing.Color.Black;
+            this.label21.Location = new System.Drawing.Point(392, 217);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(68, 23);
+            this.label21.TabIndex = 20;
+            // 
+            // label20
+            // 
+            this.label20.BackColor = System.Drawing.Color.Black;
+            this.label20.Location = new System.Drawing.Point(331, 321);
+            this.label20.Name = "label20";
+            this.label20.Size = new System.Drawing.Size(68, 23);
+            this.label20.TabIndex = 19;
+            // 
+            // label19
+            // 
+            this.label19.BackColor = System.Drawing.Color.Black;
+            this.label19.Location = new System.Drawing.Point(179, 194);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(23, 166);
+            this.label19.TabIndex = 18;
             // 
             // label18
             // 
@@ -225,7 +293,6 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(91, 23);
             this.label2.TabIndex = 1;
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // label1
             // 
@@ -234,62 +301,6 @@
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(100, 23);
             this.label1.TabIndex = 0;
-            // 
-            // label19
-            // 
-            this.label19.BackColor = System.Drawing.Color.Black;
-            this.label19.Location = new System.Drawing.Point(179, 194);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(23, 166);
-            this.label19.TabIndex = 18;
-            // 
-            // label20
-            // 
-            this.label20.BackColor = System.Drawing.Color.Black;
-            this.label20.Location = new System.Drawing.Point(331, 321);
-            this.label20.Name = "label20";
-            this.label20.Size = new System.Drawing.Size(68, 23);
-            this.label20.TabIndex = 19;
-            // 
-            // label21
-            // 
-            this.label21.BackColor = System.Drawing.Color.Black;
-            this.label21.Location = new System.Drawing.Point(392, 217);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(68, 23);
-            this.label21.TabIndex = 20;
-            // 
-            // label22
-            // 
-            this.label22.BackColor = System.Drawing.Color.Black;
-            this.label22.Location = new System.Drawing.Point(125, 420);
-            this.label22.Name = "label22";
-            this.label22.Size = new System.Drawing.Size(23, 66);
-            this.label22.TabIndex = 21;
-            // 
-            // label23
-            // 
-            this.label23.BackColor = System.Drawing.Color.Black;
-            this.label23.Location = new System.Drawing.Point(179, 383);
-            this.label23.Name = "label23";
-            this.label23.Size = new System.Drawing.Size(23, 66);
-            this.label23.TabIndex = 22;
-            // 
-            // label24
-            // 
-            this.label24.BackColor = System.Drawing.Color.Black;
-            this.label24.Location = new System.Drawing.Point(258, 420);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(23, 66);
-            this.label24.TabIndex = 23;
-            // 
-            // label25
-            // 
-            this.label25.BackColor = System.Drawing.Color.Black;
-            this.label25.Location = new System.Drawing.Point(437, 77);
-            this.label25.Name = "label25";
-            this.label25.Size = new System.Drawing.Size(23, 101);
-            this.label25.TabIndex = 24;
             // 
             // Form1
             // 
@@ -302,6 +313,7 @@
             this.Name = "Form1";
             this.Text = "Maze Game";
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -334,6 +346,7 @@
         private System.Windows.Forms.Label label21;
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
+        private System.Windows.Forms.Label finishLabel;
     }
 }
 
