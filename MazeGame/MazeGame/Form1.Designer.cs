@@ -55,6 +55,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.failCounter = new System.Windows.Forms.Label();
+            this.label26 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -328,11 +330,31 @@
             this.label1.TabIndex = 0;
             this.label1.MouseEnter += new System.EventHandler(this.wall_MouseEnter);
             // 
+            // failCounter
+            // 
+            this.failCounter.AutoSize = true;
+            this.failCounter.Location = new System.Drawing.Point(53, 9);
+            this.failCounter.Name = "failCounter";
+            this.failCounter.Size = new System.Drawing.Size(13, 13);
+            this.failCounter.TabIndex = 1;
+            this.failCounter.Text = "0";
+            // 
+            // label26
+            // 
+            this.label26.AutoSize = true;
+            this.label26.Location = new System.Drawing.Point(12, 9);
+            this.label26.Name = "label26";
+            this.label26.Size = new System.Drawing.Size(31, 13);
+            this.label26.TabIndex = 2;
+            this.label26.Text = "Fails:";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(634, 611);
+            this.Controls.Add(this.label26);
+            this.Controls.Add(this.failCounter);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.Fixed3D;
             this.MaximizeBox = false;
@@ -341,6 +363,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -373,6 +396,8 @@
         private System.Windows.Forms.Label label20;
         private System.Windows.Forms.Label label19;
         private System.Windows.Forms.Label finishLabel;
+        private System.Windows.Forms.Label failCounter;
+        private System.Windows.Forms.Label label26;
     }
 }
 
