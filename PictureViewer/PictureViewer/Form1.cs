@@ -16,5 +16,30 @@ namespace PictureViewer
         {
             InitializeComponent();
         }
+
+        private void closeBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void setBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void clearBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void showBtn_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
