@@ -34,7 +34,10 @@ namespace PictureViewer
 
         private void showBtn_Click(object sender, EventArgs e)
         {
-
+            if(openFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                pictureBox1.Load(openFileDialog1.FileName);
+            }
         }
 
         private void checkBox1_CheckedChanged(object sender, EventArgs e)
