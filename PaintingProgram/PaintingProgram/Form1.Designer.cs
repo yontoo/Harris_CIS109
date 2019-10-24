@@ -39,10 +39,10 @@
             this.greenBtn = new System.Windows.Forms.ToolStripButton();
             this.purpleBtn = new System.Windows.Forms.ToolStripButton();
             this.limeBtn = new System.Windows.Forms.ToolStripButton();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.Canvas = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
             this.toolStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -67,13 +67,13 @@
             // saveAsToolStripMenuItem
             // 
             this.saveAsToolStripMenuItem.Name = "saveAsToolStripMenuItem";
-            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveAsToolStripMenuItem.Text = "Save As";
             // 
             // saveImageAsToolStripMenuItem
             // 
             this.saveImageAsToolStripMenuItem.Name = "saveImageAsToolStripMenuItem";
-            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.saveImageAsToolStripMenuItem.Size = new System.Drawing.Size(150, 22);
             this.saveImageAsToolStripMenuItem.Text = "Save Image As";
             // 
             // toolStrip1
@@ -140,22 +140,23 @@
             this.limeBtn.Size = new System.Drawing.Size(37, 22);
             this.limeBtn.Text = "Lime";
             // 
-            // pictureBox1
+            // Canvas
             // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Black;
-            this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.pictureBox1.Location = new System.Drawing.Point(0, 49);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(800, 401);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
+            this.Canvas.BackColor = System.Drawing.Color.Black;
+            this.Canvas.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.Canvas.Location = new System.Drawing.Point(0, 49);
+            this.Canvas.Name = "Canvas";
+            this.Canvas.Size = new System.Drawing.Size(800, 401);
+            this.Canvas.TabIndex = 2;
+            this.Canvas.TabStop = false;
+            this.Canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.Canvas);
             this.Controls.Add(this.toolStrip1);
             this.Controls.Add(this.menuStrip1);
             this.Name = "Form1";
@@ -164,7 +165,7 @@
             this.menuStrip1.PerformLayout();
             this.toolStrip1.ResumeLayout(false);
             this.toolStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Canvas)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -182,7 +183,7 @@
         private System.Windows.Forms.ToolStripButton greenBtn;
         private System.Windows.Forms.ToolStripButton purpleBtn;
         private System.Windows.Forms.ToolStripButton limeBtn;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox Canvas;
     }
 }
 
