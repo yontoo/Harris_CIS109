@@ -32,5 +32,40 @@ namespace PaintingProgram
                 drawing = true;
             }
         }
+
+        private void Canvas_MouseMove(object sender, MouseEventArgs e)
+        {
+            if (drawing)
+            {
+                Graphics g = Graphics.FromImage(bmp);
+                g.DrawEllipse(p, e.X, e.Y, 3, 1);
+                Canvas.Image = bmp;
+            }
+        }
+
+        private void redBtn_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Red;
+        }
+
+        private void blueBtn_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Blue;
+        }
+
+        private void greenBtn_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Green;
+        }
+
+        private void purpleBtn_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Purple;
+        }
+
+        private void limeBtn_Click(object sender, EventArgs e)
+        {
+            p.Color = Color.Lime;
+        }
     }
 }

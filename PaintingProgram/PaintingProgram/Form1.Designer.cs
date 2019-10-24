@@ -99,6 +99,7 @@
             this.redBtn.Name = "redBtn";
             this.redBtn.Size = new System.Drawing.Size(31, 22);
             this.redBtn.Text = "Red";
+            this.redBtn.Click += new System.EventHandler(this.redBtn_Click);
             // 
             // blueBtn
             // 
@@ -109,6 +110,7 @@
             this.blueBtn.Name = "blueBtn";
             this.blueBtn.Size = new System.Drawing.Size(34, 22);
             this.blueBtn.Text = "Blue";
+            this.blueBtn.Click += new System.EventHandler(this.blueBtn_Click);
             // 
             // greenBtn
             // 
@@ -119,6 +121,7 @@
             this.greenBtn.Name = "greenBtn";
             this.greenBtn.Size = new System.Drawing.Size(42, 22);
             this.greenBtn.Text = "Green";
+            this.greenBtn.Click += new System.EventHandler(this.greenBtn_Click);
             // 
             // purpleBtn
             // 
@@ -129,6 +132,7 @@
             this.purpleBtn.Name = "purpleBtn";
             this.purpleBtn.Size = new System.Drawing.Size(45, 22);
             this.purpleBtn.Text = "Purple";
+            this.purpleBtn.Click += new System.EventHandler(this.purpleBtn_Click);
             // 
             // limeBtn
             // 
@@ -139,6 +143,7 @@
             this.limeBtn.Name = "limeBtn";
             this.limeBtn.Size = new System.Drawing.Size(37, 22);
             this.limeBtn.Text = "Lime";
+            this.limeBtn.Click += new System.EventHandler(this.limeBtn_Click);
             // 
             // Canvas
             // 
@@ -150,6 +155,8 @@
             this.Canvas.TabIndex = 2;
             this.Canvas.TabStop = false;
             this.Canvas.MouseDown += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
+            this.Canvas.MouseMove += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseMove);
+            this.Canvas.MouseUp += new System.Windows.Forms.MouseEventHandler(this.Canvas_MouseClick);
             // 
             // Form1
             // 
