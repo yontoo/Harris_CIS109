@@ -39,5 +39,10 @@ namespace WebBrowser
         {
             webBrowser1.Navigate(CboLocation.Text);
         }
+
+        private void webBrowser1_DocumentCompleted(object sender, WebBrowserDocumentCompletedEventArgs e)
+        {
+            Text = "Web Browser - " + webBrowser1.Document.Title;
+        }
     }
 }
