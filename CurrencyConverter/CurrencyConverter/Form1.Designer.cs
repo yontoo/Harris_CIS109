@@ -42,13 +42,14 @@
             this.ConvertBtn.TabIndex = 0;
             this.ConvertBtn.Text = "Currency Converter";
             this.ConvertBtn.UseVisualStyleBackColor = false;
+            this.ConvertBtn.Click += new System.EventHandler(this.ConvertBtn_Click);
             // 
             // webBrowser1
             // 
             this.webBrowser1.Location = new System.Drawing.Point(0, 76);
             this.webBrowser1.MinimumSize = new System.Drawing.Size(20, 20);
             this.webBrowser1.Name = "webBrowser1";
-            this.webBrowser1.Size = new System.Drawing.Size(788, 374);
+            this.webBrowser1.Size = new System.Drawing.Size(805, 374);
             this.webBrowser1.TabIndex = 1;
             // 
             // currencyConvert
