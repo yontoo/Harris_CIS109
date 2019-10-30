@@ -31,7 +31,6 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainFrm));
             this.toolStrip1 = new System.Windows.Forms.ToolStrip();
             this.webBrowser1 = new System.Windows.Forms.WebBrowser();
-            this.webBrowser2 = new System.Windows.Forms.WebBrowser();
             this.BackBtn = new System.Windows.Forms.ToolStripButton();
             this.ForwardBtn = new System.Windows.Forms.ToolStripButton();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
@@ -63,15 +62,6 @@
             this.webBrowser1.Size = new System.Drawing.Size(800, 425);
             this.webBrowser1.TabIndex = 1;
             // 
-            // webBrowser2
-            // 
-            this.webBrowser2.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.webBrowser2.Location = new System.Drawing.Point(0, 25);
-            this.webBrowser2.MinimumSize = new System.Drawing.Size(20, 20);
-            this.webBrowser2.Name = "webBrowser2";
-            this.webBrowser2.Size = new System.Drawing.Size(800, 425);
-            this.webBrowser2.TabIndex = 2;
-            // 
             // BackBtn
             // 
             this.BackBtn.DisplayStyle = System.Windows.Forms.ToolStripItemDisplayStyle.Text;
@@ -80,6 +70,7 @@
             this.BackBtn.Name = "BackBtn";
             this.BackBtn.Size = new System.Drawing.Size(36, 22);
             this.BackBtn.Text = "Back";
+            this.BackBtn.Click += new System.EventHandler(this.BackBtn_Click);
             // 
             // ForwardBtn
             // 
@@ -89,6 +80,7 @@
             this.ForwardBtn.Name = "ForwardBtn";
             this.ForwardBtn.Size = new System.Drawing.Size(54, 22);
             this.ForwardBtn.Text = "Forward";
+            this.ForwardBtn.Click += new System.EventHandler(this.ForwardBtn_Click);
             // 
             // toolStripSeparator1
             // 
@@ -99,6 +91,7 @@
             // 
             this.CboLocation.Name = "CboLocation";
             this.CboLocation.Size = new System.Drawing.Size(121, 25);
+            this.CboLocation.KeyDown += new System.Windows.Forms.KeyEventHandler(this.CboLocation_KeyDown);
             // 
             // GoButton
             // 
@@ -108,13 +101,13 @@
             this.GoButton.Name = "GoButton";
             this.GoButton.Size = new System.Drawing.Size(26, 22);
             this.GoButton.Text = "Go";
+            this.GoButton.Click += new System.EventHandler(this.GoButton_Click);
             // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.webBrowser2);
             this.Controls.Add(this.webBrowser1);
             this.Controls.Add(this.toolStrip1);
             this.Name = "MainFrm";
@@ -135,7 +128,6 @@
         private System.Windows.Forms.ToolStripComboBox CboLocation;
         private System.Windows.Forms.ToolStripButton GoButton;
         private System.Windows.Forms.WebBrowser webBrowser1;
-        private System.Windows.Forms.WebBrowser webBrowser2;
     }
 }
 
