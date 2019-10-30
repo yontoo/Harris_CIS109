@@ -15,11 +15,14 @@ namespace MazeGame
         System.Media.SoundPlayer startSoundPlayer = new System.Media.SoundPlayer(@"C:\Windows\media\Speech Sleep.wav");
         System.Media.SoundPlayer finishSoundPlayer = new System.Media.SoundPlayer(@"C:\Windows\media\tada.wav");
         private int fails = 0;
+        private bool gameStart = false;
 
         public Form1()
         {
             InitializeComponent();
             MoveToStart();
+            fails = 0;
+            gameStart = true;
         }
 
         private void finishLabel_MouseEnter(object sender, EventArgs e)
@@ -32,11 +35,14 @@ namespace MazeGame
         private void MoveToStart()
         {
             Point startingPoint = panel1.Location;
-            startingPoint.Offset(10, 10);
+            startingPoint.Offset(20, 20);
             Cursor.Position = PointToScreen(startingPoint);
-            startSoundPlayer.Play();
-            fails++;
-            failCounter.Text = fails.ToString();
+            if (gameStart == true)
+            {
+                startSoundPlayer.Play();
+                fails++;
+                failCounter.Text = fails.ToString();
+            }
         }
 
         private void wall_MouseEnter(object sender, EventArgs e)
