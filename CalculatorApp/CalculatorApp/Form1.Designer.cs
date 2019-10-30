@@ -94,6 +94,7 @@
             this.divideBtn.TabIndex = 3;
             this.divideBtn.Text = "÷";
             this.divideBtn.UseVisualStyleBackColor = false;
+            this.divideBtn.Click += new System.EventHandler(this.operator_click);
             // 
             // multiplyBtn
             // 
@@ -105,6 +106,7 @@
             this.multiplyBtn.TabIndex = 7;
             this.multiplyBtn.Text = "×";
             this.multiplyBtn.UseVisualStyleBackColor = false;
+            this.multiplyBtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btn5
             // 
@@ -152,6 +154,7 @@
             this.minusBtn.TabIndex = 11;
             this.minusBtn.Text = "-";
             this.minusBtn.UseVisualStyleBackColor = false;
+            this.minusBtn.Click += new System.EventHandler(this.operator_click);
             // 
             // btn2
             // 
@@ -199,6 +202,7 @@
             this.plusBtn.TabIndex = 15;
             this.plusBtn.Text = "+";
             this.plusBtn.UseVisualStyleBackColor = false;
+            this.plusBtn.Click += new System.EventHandler(this.operator_click);
             // 
             // decimalBtn
             // 
@@ -256,6 +260,7 @@
             this.clearBtn.TabIndex = 17;
             this.clearBtn.Text = "Clear";
             this.clearBtn.UseVisualStyleBackColor = false;
+            this.clearBtn.Click += new System.EventHandler(this.clearBtn_Click);
             // 
             // Form1
             // 
