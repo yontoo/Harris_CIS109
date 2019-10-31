@@ -14,6 +14,7 @@ namespace CalculatorApp
     {
         Double resultValue = 0;
         string operatorClicked = "";
+        bool isOperatorClicked = false;
 
         public Form1()
         {
@@ -22,17 +23,37 @@ namespace CalculatorApp
 
         private void click_button(object sender, EventArgs e)
         {
-            if (resultBox.Text == "0")
+            if (resultBox.Text == "0" || (isOperatorClicked))
             {
                 resultBox.Clear();
             }
+
+            isOperatorClicked = false;
             Button btn = (Button)sender;
-            resultBox.Text = resultBox.Text + btn.Text;
+            if (btn.Text == ".")
+            {
+                if (!resultBox.Text.Contains("."))
+                    resultBox.Text = resultBox.Text + btn.Text;
+            }
+            else
+                resultBox.Text = resultBox.Text + btn.Text;
         }
 
         private void operator_click(object sender, EventArgs e)
         {
             Button btn = (Button)sender;
+            if (resultValue != 0)
+            {
+                equalsBtn.PerformClick();
+                operatorClicked = btn.Text;
+                isOperatorClicked = true;
+            }
+            else
+            {
+                operatorClicked = btn.Text;
+                resultValue = Double.Parse(resultBox.Text);
+                isOperatorClicked = true;
+            }
             operatorClicked = btn.Text;
             resultValue = Double.Parse(resultBox.Text);
 
