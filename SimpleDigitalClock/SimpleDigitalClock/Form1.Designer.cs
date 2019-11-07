@@ -51,7 +51,6 @@
             this.label2.TabIndex = 1;
             this.label2.Text = "00 : 00 : 00";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-
             // 
             // clock
             // 
