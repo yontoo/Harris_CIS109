@@ -65,6 +65,7 @@
             this.Name = "clock";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Digital Clock";
+            this.Load += new System.EventHandler(this.clock_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
