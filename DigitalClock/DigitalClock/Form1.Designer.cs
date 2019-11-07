@@ -31,6 +31,7 @@
             this.HourMinuteLabel = new System.Windows.Forms.Label();
             this.SecondsLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
+            this.WeekDayLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // HourMinuteLabel
@@ -63,12 +64,23 @@
             this.DateLabel.TabIndex = 3;
             this.DateLabel.Text = "Nov 11 2019";
             // 
+            // WeekDayLabel
+            // 
+            this.WeekDayLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.WeekDayLabel.ForeColor = System.Drawing.Color.White;
+            this.WeekDayLabel.Location = new System.Drawing.Point(40, 344);
+            this.WeekDayLabel.Name = "WeekDayLabel";
+            this.WeekDayLabel.Size = new System.Drawing.Size(418, 93);
+            this.WeekDayLabel.TabIndex = 4;
+            this.WeekDayLabel.Text = "Wednesday";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.WeekDayLabel);
             this.Controls.Add(this.DateLabel);
             this.Controls.Add(this.SecondsLabel);
             this.Controls.Add(this.HourMinuteLabel);
@@ -83,6 +95,7 @@
         private System.Windows.Forms.Label HourMinuteLabel;
         private System.Windows.Forms.Label SecondsLabel;
         private System.Windows.Forms.Label DateLabel;
+        private System.Windows.Forms.Label WeekDayLabel;
     }
 }
 
