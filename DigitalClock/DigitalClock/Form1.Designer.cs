@@ -28,7 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.HourMinuteLabel = new System.Windows.Forms.Label();
             this.SuspendLayout();
+            // 
+            // HourMinuteLabel
+            // 
+            this.HourMinuteLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 50F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.HourMinuteLabel.ForeColor = System.Drawing.Color.White;
+            this.HourMinuteLabel.Location = new System.Drawing.Point(0, 0);
+            this.HourMinuteLabel.Name = "HourMinuteLabel";
+            this.HourMinuteLabel.Size = new System.Drawing.Size(246, 93);
+            this.HourMinuteLabel.TabIndex = 0;
+            this.HourMinuteLabel.Text = "19 : 25";
             // 
             // Form1
             // 
@@ -36,6 +47,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Black;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.HourMinuteLabel);
             this.Name = "Form1";
             this.Text = "Form1";
             this.ResumeLayout(false);
@@ -43,6 +55,8 @@
         }
 
         #endregion
+
+        private System.Windows.Forms.Label HourMinuteLabel;
     }
 }
 
