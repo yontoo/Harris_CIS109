@@ -28,10 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.HourMinuteLabel = new System.Windows.Forms.Label();
             this.SecondsLabel = new System.Windows.Forms.Label();
             this.DateLabel = new System.Windows.Forms.Label();
             this.WeekDayLabel = new System.Windows.Forms.Label();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.SuspendLayout();
             // 
             // HourMinuteLabel
@@ -74,6 +76,10 @@
             this.WeekDayLabel.TabIndex = 4;
             this.WeekDayLabel.Text = "Wednesday";
             // 
+            // timer1
+            // 
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -86,6 +92,7 @@
             this.Controls.Add(this.HourMinuteLabel);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             this.ResumeLayout(false);
 
         }
@@ -96,6 +103,7 @@
         private System.Windows.Forms.Label SecondsLabel;
         private System.Windows.Forms.Label DateLabel;
         private System.Windows.Forms.Label WeekDayLabel;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 
